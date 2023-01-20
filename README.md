@@ -4,8 +4,8 @@
 Requires DirectX SDK To build https://www.microsoft.com/en-us/download/details.aspx?id=6812
 Windows
 
-ToDo:
-1.Fix columns
-2.Add sorting
-
+ToDo:<br>
+1.Fix columns<br>
+2.Add sorting<br>
+<br>
 ![alt text](img.png)
