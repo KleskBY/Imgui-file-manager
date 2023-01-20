@@ -295,8 +295,6 @@ int main(int, char* argv[])
                 }
                 ImGui::Columns();
                 ImGui::EndChild();
-
-                if (tScreenShot != nullptr) ImGui::Image(tScreenShot, ImVec2(300, 200));
             }
             ImGui::End();
 

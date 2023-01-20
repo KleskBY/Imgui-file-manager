@@ -1,5 +1,4 @@
 #pragma once
-#define WM_MYMESSAGE (WM_USER + 1)
 #include "imgui/imgui.h"
 #include "imgui/imgui_impl_dx9.h"
 #include "imgui/imgui_impl_win32.h"
@@ -27,7 +26,6 @@ IDirect3DTexture9* tCopy = nullptr;
 IDirect3DTexture9* tFile = nullptr;
 IDirect3DTexture9* tImage = nullptr;
 IDirect3DTexture9* tFolder = nullptr;
-IDirect3DTexture9* tScreenShot = nullptr;
 
 HRESULT CreateDeviceD3D(HWND hWnd)
 {
@@ -87,19 +85,6 @@ LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
         }
         else break;
     }
-    case WM_MYMESSAGE:
-        switch (lParam)
-        {
-        case WM_LBUTTONDBLCLK:
-            ShowWindow(hwnd, SW_SHOWDEFAULT);
-            break;
-        case WM_RBUTTONDBLCLK:
-            ExitProcess(EXIT_SUCCESS);
-            break;
-        default:
-            return DefWindowProc(hWnd, msg, wParam, lParam);
-        };
-        break;
     case WM_DESTROY:
         PostQuitMessage(0);
         return 0;
